@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description"
+          content="Tecnologia para um futuro empolgante. Desenvolvimento de aplicativos, softwares, Machine Learning."/>
+    <meta name="author" content="Galtec"/>
+    <title>Galtec</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/logo/Galtec Logo-03.svg' %}"/>
+    <style rel="preload">
+         @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype')}@font-face{font-family:'Montserrat';font-style:normal;font-display: swap;font-weight:700;src:url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.ttf) format('truetype')}@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,0))}*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-font-sans-serif);font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#000;-webkit-text-size-adjust:100%}ul{padding-left:2rem}ul{margin-top:0;margin-bottom:1rem}a{color:#0d6efd;text-decoration:underline}img{vertical-align:middle}button{border-radius:0}button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{text-transform:none}[type=button],button{-webkit-appearance:button}::-moz-focus-inner{padding:0;border-style:none}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}.container,.container-fluid{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}.collapse:not(.show){display:none}.nav-link{display:block;padding:.5rem 1rem;color:#0d6efd;text-decoration:none}.navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:.5rem;padding-bottom:.5rem}.navbar>.container-fluid{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between}.navbar-brand{padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;text-decoration:none;white-space:nowrap}.navbar-nav{display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid transparent;border-radius:.25rem}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background-repeat:no-repeat;background-position:center;background-size:100%}.navbar-dark .navbar-brand{color:#fff}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.55)}.navbar-dark .navbar-toggler{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.1)}.navbar-dark .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}.mx-2{margin-right:.5rem!important;margin-left:.5rem!important}.my-2{margin-top:.5rem!important;margin-bottom:.5rem!important}.mb-5{margin-bottom:3rem!important}.ms-3{margin-left:1rem!important}.ms-auto{margin-left:auto!important}.px-2{padding-right:.5rem!important;padding-left:.5rem!important}.text-uppercase{text-transform:uppercase!important}html,body{overflow-x:hidden}body{font-family:Helvetica,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}#galtec-logo-main{width:330px;animation:galtec-growth 1.5s ease-in-out}@keyframes galtec-growth{from{width:66px}to{width:330px}}header.masthead{padding-top:10.5rem;padding-bottom:6rem;text-align:center;color:#fff;background-image:url({% static '/assets/img/spacex-unsplash.jpg' %});background-repeat:no-repeat;background-size:cover;height:100vh;background-position:center}header.masthead .masthead-heading{font-size:2.75rem;font-weight:700;line-height:3.25rem;margin-bottom:2rem;font-family:"Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}.navbar .navbar-brand img{width:130px}.navbar{padding-top:1.5rem;padding-bottom:1.5rem;border:none;background-color:transparent}#mainNav .navbar-nav .nav-link{color:#fff;font-size:.85rem;letter-spacing:.0525em;font-family:Verdana}a{color:#fed136;text-decoration:none;background-color:transparent}.fade-in{opacity:1;animation-name:fadeInOpacity;animation-iteration-count:1;animation-timing-function:cubic-bezier(1,0,1,.17);animation-duration:1s}@keyframes fadeInOpacity{0%{opacity:0}100%{opacity:1}}
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNEPZKRMLQ"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MNEPZKRMLQ');
+    </script>
+</head>
+
+<!--TODO fazer critical css para base.html -->
+
+<body>
+<!-- Navigation-->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container-fluid mx-2">
+        <a class="navbar-brand js-scroll-trigger ms-3" href="#top">
+            <img id="galtec-nav-logo" src="{% static 'assets/logo/ex2.svg' %}"
+                 alt="Navbar Logo"/>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarScroll" aria-current="true" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-uppercase" id="navbarNav">
+            <ul class="navbar-nav my-2 my-lg-0 ms-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="#services">Serviços</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="#about">Quem somos</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Masthead-->
+
+
+<header class="masthead">
+    <div class="container fill">
+        <img width="260px" class="mb-5" src="{% static 'assets/logo/ex2.svg' %}"
+             alt="Logo text" id="galtec-logo-main"/>
+        <div id="heading" class="masthead-heading fade-in">Energia para um futuro empolgante</div>
+    </div>
+</header>
+
+<div data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+
+    <!-- Services-->
+    <section class="" id="services">
+        <div class="container-xxl no-padding">
+            <div class="text-center">
+                <h1 class="section-heading my-5">Nossos Serviços</h1>
+            </div>
+            <div class="bg-grey my-5 " id="Apps">
+                <div class="row">
+                    <div class="col-sm-6 text-center ">
+                        <h2 class="my-9 animation-element slide-left">Aplicativos</h2>
+                        <h1 class="my-9 mx-1 animation-element slide-left">
+                            Crie tendências, com estilo e funcionalidade.
+                        </h1>
+                        <h2 class="my-9 mx-1 animation-element slide-left">
+                            Sua ideia nas mãos dos seus clientes. </h2>
+                        <div class="row mx-5 my-1 mt-9 animation-element slide-left">
+                            <div class="col">
+                                <i class="fab fa-apple fa-3x"></i>
+                            </div>
+                            <div class="col">
+                                <i class="fab fa-android fa-3x"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 align-middle  d-flex align-items-center">
+                        <img src="{% static 'assets/img/iphone.jpg' %}" class="img-fluid " width="800px;"
+                             alt="Mobile phone">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-jungle-mist my-5" id="Sites">
+                <div class="row">
+                    <div class="col-sm-6 text-center ">
+                        <h2 class="my-9 animation-element slide-left dark-jungle-mist">Sites</h2>
+                        <h1 class="my-9 mx-1 animation-element slide-left dark-jungle-mist">
+                            Celular, tablet ou desktop ?
+                        </h1>
+                        <h2 class="my-9 mx-1 animation-element slide-left dark-jungle-mist">
+                            Seu site otimizado para todos os dipositivos.
+                        </h2>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                        <img src="{% static 'assets/img/multi-devices.jpg' %}" width="800px;" class="img-fluid d-block"
+                             alt="Desktop and Mobile phone" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bg-dark my-5" id="Softwares">
+                <div class="row">
+                    <div class="col-sm-6 text-center ">
+                        <h2 class="my-9 animation-element slide-left text-white">Softwares</h2>
+                        <h1 class="my-9 mx-1 animation-element slide-left text-white">
+                            Inove, escale, domine o mercado!
+                        </h1>
+                        <h2 class="my-9 mx-1 animation-element slide-left text-white">
+                            Desenvolva softwares para automatizar processos, e foque seu time aonde realmente é
+                            importante.
+                        </h2>
+                    </div>
+                    <div class="col-sm-6 d-flex align-items-center">
+                        <img src="{% static 'assets/img/brooke-cagle-1.jpg' %}" width="800px;" class="img-fluid d-block"
+                             alt="Desktop and Mobile phone" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- About-->
+    <section class="my-3 py-3 bg-grey" id="about">
+        <div class="container-xxl text-center">
+            <h2 class="text-uppercase inline-block py-4"> Sobre a Galtec </h2>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5 py-3">
+                    <img class="img-fluid" width="650px" src="{% static 'assets/img/galtec-employees.jpg' %}"
+                         alt="employees"
+                         loading="lazy">
+                </div>
+                <div class="col-md-5 mt-3">
+                    <h3 class="">Criamos resultados.
+                    </h3>
+                    <h4 class="my-5 text-grey">
+                        Atenção aos nossos clientes, trabalho duro e inteligente, e uma dose de inovação. Essa é a
+                        nossa fórmula de sucesso.</h4>
+                    <h4 class="my-5 text-grey">
+                        Aqui o foco é fazer seu negócio ser um sucesso.</h4>
+                    <h4 class="my-5 text-grey">
+                        Excelência é requisito mínimo em tudo que fazemos.
+                    </h4>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-5 d-flex justify-content-center">
+                <div class="col-md-5 mt-3">
+                    <h4 class="my-5 text-grey">
+                        Desenvolvemos softwares, aplicativos e sites, para superar as expectativas.</h4>
+                    <h4 class="mt-5 text-grey">
+                        Trabalhamos com as tecnologias:</h4>
+                    <div class="row">
+                        <div class="col-4 mt-3">
+                            <i class="fab fa-python fa-3x"></i>
+                            <div>Python</div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <i class="fab fa-js-square fa-3x"></i>
+                            <div>JavaScript</div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <img class="img-fluid" width="42px"
+                                 src="{% static 'assets/img/logos/kotlin-logo-black-and-white.png' %}" loading="lazy"
+                                 alt="kotlin logo">
+                            <div> Kotlin</div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <i class="fab fa-swift fa-3x"></i>
+                            <div>
+                                Swift
+                            </div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <i class="fab fa-react fa-3x"></i>
+                            <div>
+                                React Native
+                            </div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <img class="img-fluid" width="42px"
+                                 src="{% static 'assets/img/logos/tensorflow_logo_icon_144808.png' %}"
+                                 loading="lazy" alt="tensorflow logo">
+                            <div>
+                                Tensor Flow
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 py-3">
+                    <img class="img-fluid" width="350px" src="{% static 'assets/img/code-computer-2.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-5 py-2 dark-grey" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="text-white pt-3">Fale com a gente</h2>
+            </div>
+            <div class="row ">
+                <div class="col-sm-6 my-3">
+                    <img class="img-fluid" width="800px;" src="{% static '/assets/img/coffe-contact.jpg' %}">
+                </div>
+                <div class="col-sm-6 my-3">
+                    <form id="contactForm" @submit.prevent="onSubmit">
+                        <div class="form-group">
+                            <input class="form-control" v-model="name" id="name" type="text" placeholder="Seu Nome *"
+                                   required="required"
+                                   data-validation-required-message="Por favor preencha seu nome."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" v-model="email" id="email" type="email"
+                                   placeholder="Seu Email *"
+                                   required="required"
+                                   data-validation-required-message="Precisamos do seu email para entrar em contato."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group ">
+                            <input class="form-control" v-model="phone" id="phone" type="tel" placeholder="Telefone *"
+                                   required="required"
+                                   data-validation-required-message="Precisamos do seu telefone para entrar em contato."/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group form-group-textarea ">
+                                            <textarea class="form-control" v-model="msg" id="message"
+                                                      placeholder="Sua Mensagem *"
+                                                      required="required"
+                                                      data-validation-required-message="Preencha sua message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <button type="button" @click="sendContact()" class="btn btn-yellow btn-xl"
+                                id="sendMessageButton">
+                            <div v-if="status == 'initial' ">
+                                Enviar
+                            </div>
+                            <div v-else-if="status == 'loading' ">
+                                <div class="spinner-border text-light" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div v-else-if="status == 'success' ">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div v-else-if="status == 'error' ">
+                                Erro
+                            </div>
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<!-- Footer-->
+<footer class="footer mt-4 py-4 dark-j">
+    <div class="container">
+        <div class="row align-items-center px-5">
+            <div class="col-lg-4 d-flex justify-content-center text-white">
+                Copyright © Galtec 2021
+            </div>
+            <div class="col-lg-4 my-3 my-lg-0 d-flex justify-content-center">
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/galtec.pro/"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/galtec.pro/"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/company/galtec"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="row">
+                    <div class="col">
+                        <a class="footer-links" href="{% url 'privacy_policy' %}">Política de Privacidade</a>
+                    </div>
+                    <div class="col">
+                        <a class="footer-links" href="{% url 'terms_of_use' %}">Termos de uso</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome icons (free version)-->
+<script src="https://kit.fontawesome.com/cd993ec72c.js" crossorigin="anonymous"></script>
+
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+
+<!-- J query-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!--Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+<!-- Core theme JS-->
+<script src="{% static 'js/n-script.js' %}"></script>
+<!--Axios -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+<!-- Css styles-->
+<link href="{% static 'css/base.css' %}" rel="stylesheet"/>
+
+<!-- Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+</body>
+
+
+<script>
+    /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
+$(document).ready(function() {
+
+  //window and animation items
+  var animation_elements = $.find('.animation-element');
+  var web_window = $(window);
+
+  //check to see if any animation containers are currently in view
+  function check_if_in_view() {
+    //get current window information
+    var window_height = web_window.height();
+    var window_top_position = web_window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    //iterate through elements to see if its in view
+    $.each(animation_elements, function() {
+
+      //get the element sinformation
+      var element = $(this);
+      var element_height = $(element).outerHeight();
+      var element_top_position = $(element).offset().top;
+      var element_bottom_position = (element_top_position + element_height);
+
+      //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+      if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+        element.addClass('in-view');
+      } else {
+        element.removeClass('in-view');
+      }
+    });
+
+  }
+
+  //on or scroll, detect elements in view
+  $(window).on('scroll resize', function() {
+      check_if_in_view()
+    })
+    //trigger our scroll event on initial load
+  $(window).trigger('scroll');
+
+});
+
+
+</script>
+
+<!--TODO form validation-->
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const origin = urlParams.get('origin');
+
+</script>
+<script>
+var app = new Vue({
+  delimiters: ["[[", "]]"],
+  el: '#contact',
+  data: {
+      name: '',
+      email: '',
+      phone: '',
+      msg: '',
+      status: 'initial',
+      form_prob: ''
+  },
+  methods: {
+    sendContact(){
+<!--        if(this.name.lenght <3){-->
+<!--            form_pro.push('Por favor, preencha seu nome)';-->
+<!--        }-->
+       this.status = 'loading';
+       console.log('name', this.name);
+       axios({
+          method: 'post',
+          url: '{% url 'clients_api:client_contact' %}',
+          headers: {'X-CSRFToken': '{{ csrf_token }}',},
+          data: {
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            msg: this.msg,
+            origin: origin
+          }
+        }).then((response) => {
+          console.log(response);
+          this.status = 'success';
+          this.clearInputs();
+        }, (error) => {
+          console.log(error);
+          this.status = 'error';
+          this.clearInputs();
+        });
+
+    },
+   clearInputs(){
+    this.name = '',
+    this.email = '',
+    this.phone = '',
+    this.msg = ''
+  },
+  },
+
+
+
+})
+
+
+
+
+
+</script>
+
+<script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?98319';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"",
+      "borderRadius":"50",
+      "marginLeft":"0",
+      "marginBottom":"25",
+      "marginRight":"25",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":"Galtec",
+      "brandSubTitle":"Conectado",
+      "brandImg":"https://galtec-staticfiles.s3-sa-east-1.amazonaws.com/assets/logo/Galtec%20Logo-03.svg",
+      "welcomeText":"Olá, tudo bem? Me chamo Julio e trabalho na Galtec, como posso ajudá-lo?",
+      "messageText":"Olá, Júlio. Tudo bem? Estava no site da Galtec e quero desenvolver meu projeto com vocês.",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Abrir Whatsapp",
+      "borderRadius":"50",
+      "autoShow":false,
+      "phoneNumber":"5515997592161"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+
+
+
+
+</script>
+
+
+</html>
+
+
+<!--https://www.sitelocity.com/critical-path-css-generator-->

@@ -1,4 +1,4 @@
-"""g_energy URL Configuration
+"""galtec URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.urls import include, path
 from django.contrib import admin
+from django.urls import path, include
+from . import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.homeView, name='home'),
+    path('politicaDePrivacidade/', views.privacyPolicy, name='privacy_policy'),
+    path('termosDeUso/', views.termsOfUse, name='terms_of_use'),
+    path('base/', views.baseApp, name='base'),
+    path('api/clients/', include("clients.api.urls", namespace='clients_api')),
 ]
